@@ -5,6 +5,7 @@ public class Usuario {
 	private String nombre;
 	private String email;
 	private String contraseña;
+	private boolean loggued = false;
 	private boolean premium = false;
 	
 	public Usuario(String n, String e, String c, boolean p) {
@@ -12,6 +13,10 @@ public class Usuario {
 		this.email = e;
 		this.contraseña = c;
 		this.premium = p;
+	}
+	
+	public void setLoggin(boolean t){
+		this.loggued = t;
 	}
 	
 	//Getters
@@ -22,6 +27,17 @@ public class Usuario {
 	public String getEmail(){
 		return this.email;
 	}
-	
 
+	public String getContraseña() {
+		return this.contraseña;
+	}
+	
+	public boolean isLogin() {
+		return this.loggued;
+	}
+	
+	@Override 
+	public String toString() {
+		return this.nombre;
+	}
 }
