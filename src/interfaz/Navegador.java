@@ -37,6 +37,22 @@ public class Navegador implements Discord{
 
 	@Override
 	public void crearUsuario(String name, String email, String contraseña, boolean prem) {
+		
+
+		Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el nombre del usuario:");
+        name = scanner.nextLine();
+
+        System.out.println("Ingrese el correo electrónico del usuario:");
+        email = scanner.nextLine();
+
+        System.out.println("Ingrese la contraseña del usuario:");
+        contraseña = scanner.nextLine();
+
+        System.out.println("¿Es un usuario premium? (true/false):");
+        prem = scanner.nextBoolean();
+		
 		Usuario u1 = new Usuario(name, email, contraseña, prem);
 		System.out.println("\nUsuario creado correctamente por Navegador\n");
 		Main.usuarios.add(u1);

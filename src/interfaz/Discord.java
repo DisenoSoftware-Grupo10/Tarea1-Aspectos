@@ -12,4 +12,5 @@ public interface Discord{
 	
 	public void crearUsuario(String name, String email, String contraseña, boolean prem);
 
+	
 }
