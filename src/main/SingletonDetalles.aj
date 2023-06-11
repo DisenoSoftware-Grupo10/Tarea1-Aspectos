@@ -2,21 +2,32 @@ package main;
 
 public aspect SingletonDetalles {
 	
-	private static DetallesApp infoVersion;
+	public static  DetallesApp details;
 	
+	pointcut getInstancia(): call(DetallesApp main.DetallesApp.obtenerInstancia());
+	pointcut prohibidoAcceso(): call(void DetallesApp.cambiarDatos());
 	
-	pointcut instanciarDetalles(): call(void DetallesApp.DetallesApp());
-	
-	Object around (): instanciarDetalles(){
-		
-		if(infoVersion != null) {
-			System.out.println("Descripcion:.");
-			return infoVersion;
-		}
-		else {
-			System.out.println("Mostrando por primera vez.Datos inalterables.");
-			infoVersion = new DetallesApp();
-			return infoVersion;
+	Object around(): getInstancia(){
+		System.out.println("Solo visualizacion");
+		if(details==null) {
+			System.out.println("instancia creada por primera y unica vez");
+			Object result=proceed();
+			details=(DetallesApp)result;
+			return details;
+		}else {
+			System.out.println("Instancia unica.");
+			return details;
+			
 		}
 	}
+	before(): getInstancia(){
+		System.out.println("");
+	}
+	
+	before(): prohibidoAcceso(){
+		System.out.println("No tiene permitido acceder al versionamiento.");
+	}
+	
+	
+	
 }

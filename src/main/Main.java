@@ -13,6 +13,10 @@ public class Main {
 		Discord navegador = new Navegador();
 		Discord ios = new AdapterToIOS();
 		
+		DetallesApp d1= DetallesApp.obtenerInstancia();
+		DetallesApp d2= DetallesApp.obtenerInstancia();
+		System.out.println(d1.toString());
+		System.out.println(d2.toString());
 		
 		
 		//ios.crearUsuario("Carlos", "hola@gmail.com","si", false);
@@ -40,7 +44,6 @@ public class Main {
             switch (opcionMenuPrincipalDiscord) {
                 case 1:
                     System.out.println("\n\nBienvenido usuario Android!");
-					System.out.println(new DetallesApp());
                     System.out.println("------------------------------------");
                     sc.nextLine();
                     do {
@@ -93,7 +96,6 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("\n\nBienvenido usuario de Navegador!");
-                    System.out.println(new DetallesApp());
                     System.out.println("------------------------------------");
                     sc.nextLine();
                     do {
