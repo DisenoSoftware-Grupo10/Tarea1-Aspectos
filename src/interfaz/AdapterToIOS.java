@@ -3,8 +3,9 @@ package interfaz;
 import java.util.Scanner;
 import main.*;
 
-public class AdapterToIOS implements Discord{
 
+public class AdapterToIOS implements Discord{
+	
 	IOS ios = new IOS("default", 999, "defaultemail");
 
 	@Override

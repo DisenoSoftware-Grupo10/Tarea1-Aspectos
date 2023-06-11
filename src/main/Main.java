@@ -13,6 +13,8 @@ public class Main {
 		Discord navegador = new Navegador();
 		Discord ios = new AdapterToIOS();
 		
+		
+		
 		//ios.crearUsuario("Carlos", "hola@gmail.com","si", false);
 		//android.crearUsuario("Daniel", "chao@gmail.com","no", true);
 		//navegador.crearUsuario("Angel", "gato@gmail.com","contraseña", false);
@@ -38,6 +40,7 @@ public class Main {
             switch (opcionMenuPrincipalDiscord) {
                 case 1:
                     System.out.println("\n\nBienvenido usuario Android!");
+					System.out.println(new DetallesApp());
                     System.out.println("------------------------------------");
                     sc.nextLine();
                     do {
@@ -90,6 +93,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("\n\nBienvenido usuario de Navegador!");
+                    System.out.println(new DetallesApp());
                     System.out.println("------------------------------------");
                     sc.nextLine();
                     do {
@@ -208,6 +212,7 @@ public class Main {
       }
 	 public static void mostrarMenuPrincipal(){
          System.out.println("==== Bievenido a Discord ====");
+		 
          System.out.println("------------------------------------");
          System.out.println("Selecciones su plataforma de inicio de sesión");
          System.out.println("------------------------------------");
