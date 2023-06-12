@@ -13,18 +13,15 @@ public class Main {
 		Discord navegador = new Navegador();
 		Discord ios = new AdapterToIOS();
 		
-		//ios.crearUsuario("Carlos", "hola@gmail.com","si", false);
-		//android.crearUsuario("Daniel", "chao@gmail.com","no", true);
-		//navegador.crearUsuario("Angel", "gato@gmail.com","contraseña", false);
 		
-		//android.login(sc);
+		/*Usuario u1 = new Usuario("Carlos", "hola@gmail.com","si", false);
+		Usuario u2 = new Usuario("Daniel", "chao@gmail.com","no", true);
+		Usuario u3 = new Usuario("Angel", "gato@gmail.com","contraseña", false);
+		usuarios.add(u1);
+		usuarios.add(u2);
+		usuarios.add(u3);*/
 		
-		//System.out.println(DetallesApp.getInstance());
 		
-		//ios.login(sc);
-		//ios.llamar(usuarios.get(0), usuarios.get(1));
-		
-		//System.out.println(usuarios);
 		
 		int opcionMenuPrincipalDiscord;
 		int opcionMenuSecundario;
